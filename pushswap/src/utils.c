@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:16:10 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/03 14:34:32 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/04 20:00:01 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,3 +80,18 @@ int	nb_abs(int nb)
 		return (nb * -1);
 	return (nb);
 }
+/*
+int	main()
+{
+	printf("%ld\n", ft_atoi("0000001"));
+}
+*/
+
+
+
+
+
+
+
+
+

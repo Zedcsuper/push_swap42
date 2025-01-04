@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:38:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/04 18:07:26 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/04 20:15:07 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,31 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
+	int *allav = malloc(sizeof(int) * (ac - 1));
+	int x = 0;
+	while (x < ac - 1)
+	{
+		allav[x] = ft_atoi(av[x + 1]);
+		x++;
+	}
+	int j = 0;
+	x = 0;
+	while (x < ac - 1)
+	{
+		j = x + 1;
+		while (j < ac - 1)
+		{
+			if (allav[x] == allav[j])
+			{
+				free(allav);
+				ft_putstr("Error\n");
+				return (0);
+				//exit_error(NULL, NULL);
+			}
+			j++;
+		}
+		x++;
+	}
 	if (!is_correct_input(av))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
