@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:04:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/04 19:46:27 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/05 17:03:31 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ static int	have_duplicate(char **av)
 		j = 1;
 		while (av[j])
 		{
-			if (j != i && nbstr_cmp(av[i], av[j]) == 0)
+			if (j != i && (nbstr_cmp(av[i], av[j]) == 0 || \
+				ft_atoi(av[i]) == ft_atoi(av[j])  || ft_strlen(av[i]) > 10))
 				return (1);
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:38:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/04 20:15:07 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/05 12:49:43 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ static void	push_swap(t_stack **a, t_stack **b, int stack_size)
 		sort(a, b);
 }
 
+/*
 static void	debug_stack(t_stack *stack)
 {
 	while (stack)
@@ -42,7 +43,7 @@ static void	debug_stack(t_stack *stack)
 	}
 	printf("\n");
 }
-
+*/
 int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
@@ -51,31 +52,6 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		return (0);
-	int *allav = malloc(sizeof(int) * (ac - 1));
-	int x = 0;
-	while (x < ac - 1)
-	{
-		allav[x] = ft_atoi(av[x + 1]);
-		x++;
-	}
-	int j = 0;
-	x = 0;
-	while (x < ac - 1)
-	{
-		j = x + 1;
-		while (j < ac - 1)
-		{
-			if (allav[x] == allav[j])
-			{
-				free(allav);
-				ft_putstr("Error\n");
-				return (0);
-				//exit_error(NULL, NULL);
-			}
-			j++;
-		}
-		x++;
-	}
 	if (!is_correct_input(av))
 		exit_error(NULL, NULL);
 	stack_b = NULL;
@@ -83,7 +59,6 @@ int	main(int ac, char **av)
 	stack_size = get_stack_size(stack_a);
 	assign_index(stack_a, stack_size + 1);
 	push_swap(&stack_a, &stack_b, stack_size);
-//	debug_stack(stack_a);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
 	return (0);

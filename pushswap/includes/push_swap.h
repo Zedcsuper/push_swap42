@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:50:36 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/03 16:11:27 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/05 17:02:38 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
+int		ft_strlen(char *s1);
 int		get_lowest_index_position(t_stack **stack);
 int		get_stack_size(t_stack *stack);
 int		is_correct_input(char **av);
