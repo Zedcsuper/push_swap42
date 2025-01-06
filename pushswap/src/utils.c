@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:16:10 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/06 17:50:29 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/07 01:45:41 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ void	ft_free_av(char **av, int ac)
 	}
 	free(av);
 	av = NULL;
-	exit (1);
 }
 
 /* here try to git rid of !a */
