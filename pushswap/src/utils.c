@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:16:10 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/05 17:02:15 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/05 21:58:40 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	free_stack(t_stack **stack)
 int	ft_strlen(char *s1)
 {
 	int	i;
+
+	i = 0;
 	while (*s1)
 	{
 		s1++;
@@ -37,8 +39,6 @@ int	ft_strlen(char *s1)
 	}
 	return (i);
 }
-
-
 
 /* here try to git rid of !a */
 void	exit_error(t_stack **a, t_stack **b)
