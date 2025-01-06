@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:50:36 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/05 17:02:38 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:31:07 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdio.h>
+# include "../libft/libft.h"
 
 typedef struct s_stack
 {
@@ -30,7 +31,8 @@ typedef struct s_stack
 	struct s_stack	*next;
 }					t_stack;
 
-int		ft_strlen(char *s1);
+//int		ft_strlen(char *s1);
+int		get_av_len(char **av);
 int		get_lowest_index_position(t_stack **stack);
 int		get_stack_size(t_stack *stack);
 int		is_correct_input(char **av);
@@ -39,8 +41,8 @@ int		is_sign(char c);
 int		is_sorted(t_stack *stack);
 int		nb_abs(int nb);
 int		nbstr_cmp(const char *s1, const char *s2);
-long	ft_atoi(const char *str);
-t_stack	*fill_stack_values(int ac, char **av);
+//long	ft_atoi(const char *str);
+t_stack	*fill_stack_values(int ac, char **av, int is_one_str);
 t_stack	*get_stack_before_bottom(t_stack *stack);
 t_stack	*get_stack_bottom(t_stack *stack);
 t_stack	*stack_new(int value);
@@ -65,5 +67,5 @@ void	get_cost(t_stack **a, t_stack **b);
 void	get_target_position(t_stack **a, t_stack **b);
 void	sort(t_stack **a, t_stack **b);
 void	tiny_sort(t_stack **stack);
-
+void	ft_free_av(char **av, int ac);
 #endif

@@ -6,16 +6,18 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:55:19 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/04 16:52:39 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:50:58 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+/*
 int	is_digit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
+*/
 
 int	is_sign(char c)
 {

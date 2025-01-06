@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 17:04:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/05 17:03:31 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/06 16:18:40 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static int	arg_is_number(char *av)
 	i = 0;
 	if (is_sign(av[i]) && av[i + 1] != '\0')
 		i++;
-	while (av[i] && is_digit(av[i]))
+	while (av[i] && ft_isdigit(av[i]))
 		i++;
-	if (av[i] != '\0' && !is_digit(av[i]))
+	if (av[i] != '\0' && !ft_isdigit(av[i]))
 		return (0);
 	return (1);
 }
@@ -37,8 +37,12 @@ static int	have_duplicate(char **av)
 		j = 1;
 		while (av[j])
 		{
+			/*
 			if (j != i && (nbstr_cmp(av[i], av[j]) == 0 || \
 				ft_atoi(av[i]) == ft_atoi(av[j])  || ft_strlen(av[i]) > 10))
+				return (1);
+			*/
+			if ((j != i) && (ft_atoi(av[i]) == ft_atoi(av[j])  || ft_strlen(av[i]) > 10))
 				return (1);
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:16:10 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/05 17:02:15 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:50:29 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	free_stack(t_stack **stack)
 	*stack = NULL;
 }
 
+/*
 int	ft_strlen(char *s1)
 {
 	int	i;
@@ -37,8 +38,22 @@ int	ft_strlen(char *s1)
 	}
 	return (i);
 }
+*/
 
+void	ft_free_av(char **av, int ac)
+{
+	int	i;
 
+	i = 0;
+	while(i < ac)
+	{
+		free(av[i]);
+		i++;
+	}
+	free(av);
+	av = NULL;
+	exit (1);
+}
 
 /* here try to git rid of !a */
 void	exit_error(t_stack **a, t_stack **b)
@@ -50,7 +65,7 @@ void	exit_error(t_stack **a, t_stack **b)
 	write(2, "Error\n", 6);
 	exit (1);
 }
-
+/*
 long	ft_atoi(const char *str)
 {
 	long	nb;
@@ -74,6 +89,7 @@ long	ft_atoi(const char *str)
 	}
 	return (nb * isneg);
 }
+*/
 
 void	ft_putstr(char *str)
 {
@@ -93,6 +109,17 @@ int	nb_abs(int nb)
 		return (nb * -1);
 	return (nb);
 }
+
+int	get_av_len(char **av)
+{
+	int	i;
+
+	i = 0;
+	while (av[i])
+		i++;
+	return (i);
+}
+
 /*
 int	main()
 {

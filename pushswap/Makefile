@@ -1,6 +1,6 @@
 CC = cc
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 
 INCLUDE = -I./includes
 
@@ -9,6 +9,10 @@ OBJ_DIR = obj_dir
 RM = rm -rf
 
 NAME = push_swap
+
+LIBFT = ./libft/libft.a
+
+LIBFT_DIR = libft
 
 OUTPUTFLAG = -o
 
@@ -35,10 +39,14 @@ SRCS =\
 
 OBJS = $(addprefix $(OBJ_DIR)/, $(notdir $(SRCS:.c=.o)))
 
-all: $(NAME)
+all: $(LIBFT_DIR)  $(NAME)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(OUTPUTFLAG) $(NAME)
+$(NAME): $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(OUTPUTFLAG) $(NAME)
+
+libft:
+	$(MAKE) -C $(LIBFT_DIR)
+
 
 $(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDE) $(NORELINKFLAG) $< $(OUTPUTFLAG) $@
@@ -47,11 +55,13 @@ $(OBJ_DIR):
 	$(MKDIR) $(OBJ_DIR)
 
 clean:
+	$(MAKE) clean -C $(LIBFT_DIR)
 	$(RM) $(OBJ_DIR)
 
 fclean: clean
+	$(MAKE) fclean -C $(LIBFT_DIR)
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re libft
