@@ -25,7 +25,6 @@ SRCS =\
 	src/do_move.c \
 	src/initialization.c \
 	src/input_check.c \
-	src/input_check_utils.c \
 	src/main.c \
 	src/position.c \
 	src/push.c \

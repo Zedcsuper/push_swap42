@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:13:51 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/06 17:27:18 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/07 15:15:13 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 t_stack	*fill_stack_values(int ac, char **av, int is_one_str)
 {
-	/////////////////////
 	t_stack	*stack_a;
 	long	nb;
 	int		i;
@@ -28,7 +27,6 @@ t_stack	*fill_stack_values(int ac, char **av, int is_one_str)
 	while (i < ac)
 	{
 		nb = ft_atoi(av[i]);
-//		printf("%ld\n", nb);
 		if (nb > INT_MAX || nb < INT_MIN)
 			exit_error(&stack_a, NULL);
 		if (i == 0 && is_one_str)

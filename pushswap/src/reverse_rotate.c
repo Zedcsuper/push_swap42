@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 23:20:54 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/03 23:29:50 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/07 15:13:01 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,18 @@ static void	rev_rotate(t_stack **stack)
 void	do_rra(t_stack **stack_a)
 {
 	rev_rotate(stack_a);
-	ft_putstr("rra\n");
+	ft_printf("rra\n");
 }
 
 void	do_rrb(t_stack **stack_b)
 {
 	rev_rotate(stack_b);
-	ft_putstr("rrb\n");
+	ft_printf("rrb\n");
 }
 
 void	do_rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	rev_rotate(stack_a);
 	rev_rotate(stack_b);
-	ft_putstr("rrr\n");
+	ft_printf("rrr\n");
 }
