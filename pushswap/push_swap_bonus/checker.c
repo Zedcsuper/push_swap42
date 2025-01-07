@@ -6,7 +6,7 @@
 /*   By: zjamaien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 13:18:08 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/05 15:52:22 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/07 17:13:16 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 #include <stdio.h>
 #include <string.h>
 #include "./libft/libft.h"
+
+int	is_sorted(t_stack *stack)
+{
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
 
 void	exec_instruction(t_stack **pile_a, t_stack **pile_b, char *instruction)
 {
