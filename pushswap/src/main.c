@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:38:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/07 14:12:54 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:02:33 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../includes/push_swap.h"
@@ -65,7 +65,7 @@ int	main(int ac, char **av)
 		return (0);
 	if (ac == 2)
 		init_av(&av, &ac, &is_one_str);
-	if (!is_correct_input(av))
+	if (!is_correct_input(av, is_one_str))
 	{
 		if (is_one_str)
 			ft_free_av(av, ac);

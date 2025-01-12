@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:50:36 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/07 16:56:57 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:51:46 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ typedef struct s_stack
 int		get_av_len(char **av);
 int		get_lowest_index_position(t_stack **stack);
 int		get_stack_size(t_stack *stack);
-int		is_correct_input(char **av);
+int		is_correct_input(char **av, int is_one_str);
 int		is_digit(char c);
 int		is_sorted(t_stack *stack);
-int		nb_abs(int nb);
-int		nbstr_cmp(const char *s1, const char *s2);
 t_stack	*fill_stack_values(int ac, char **av, int is_one_str);
 t_stack	*get_stack_before_bottom(t_stack *stack);
 t_stack	*get_stack_bottom(t_stack *stack);

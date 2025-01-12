@@ -6,7 +6,7 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 23:57:33 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/07 15:27:09 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 13:56:53 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*get_next_line(int fd);
 long	ft_atoi(const char *str);
+int		ft_abs(int nb);
 int		ft_issign(char c);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -53,6 +54,7 @@ int		ft_strcmp(char *s1, char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int		ft_isspace(char c);
 size_t	ft_strlcat(char *dst, const char *src, size_t datasize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t datasize);
 size_t	ft_strlen(const char *s);

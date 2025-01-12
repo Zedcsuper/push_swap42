@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   initialization.c                                   :+:      :+:    :+:   */
+/*   initialization_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 16:13:51 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/12 13:52:44 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:43:36 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/push_swap_bonus.h"
 
 t_stack	*fill_stack_values(int ac, char **av, int is_one_str)
 {
@@ -38,31 +38,4 @@ t_stack	*fill_stack_values(int ac, char **av, int is_one_str)
 	return (stack_a);
 }
 
-void	assign_index(t_stack *stack_a, int stack_size)
-{
-	t_stack	*ptr;
-	t_stack	*highest;
-	int		value;
 
-	while (--stack_size > 0)
-	{
-		ptr = stack_a;
-		value = INT_MIN;
-		highest = NULL;
-		while (ptr)
-		{
-			if (ptr->value == INT_MIN && ptr->index == 0)
-				ptr->index = 1;
-			if (ptr->value > value && ptr->index == 0)
-			{
-				value = ptr->value;
-				highest = ptr;
-				ptr = stack_a;
-			}
-			else
-				ptr = ptr->next;
-		}
-		if (highest != NULL)
-			highest->index = stack_size;
-	}
-}

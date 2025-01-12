@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   input_check.c                                      :+:      :+:    :+:   */
+/*   input_check_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: zjamaien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/03 17:04:02 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/12 16:01:16 by zjamaien         ###   ########.fr       */
+/*   Created: 2025/01/12 14:36:05 by zjamaien          #+#    #+#             */
+/*   Updated: 2025/01/12 14:36:34 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/push_swap_bonus.h"
 
 static int	arg_is_number(char *av)
 {
@@ -33,7 +33,7 @@ static int	is_overflow(const char *str)
 	int		i;
 
 	res = 0;
-	sign = 0;
+	sign = 1;
 	i = 0;
 	while (ft_isspace(str[i]))
 		i++;
@@ -49,23 +49,16 @@ static int	is_overflow(const char *str)
 		res = (res * 10) + (str[i++] - '0');
 		if ((!sign && res > INT_MAX) || (sign && - res < INT_MIN))
 			return (1);
-	}
-	if ((!sign && res > INT_MAX) || (sign && - res < INT_MIN))
-	{
-		return (1);
-	}
+	}	
 	return (0);
 }
 
-static int	have_duplicate(char **av, int is_one_str)
+static int	have_duplicate(char **av)
 {
 	int	i;
 	int	j;
 
-	if (is_one_str)
-		i = 0;
-	else
-		i = 1;
+	i = 1;
 	while (av[i])
 	{
 		j = 1;
@@ -94,7 +87,7 @@ int	is_correct_input(char **av, int is_one_str)
 			return (0);
 		i++;
 	}
-	if (have_duplicate(av, is_one_str))
+	if (have_duplicate(av))
 		return (0);
 	return (1);
 }

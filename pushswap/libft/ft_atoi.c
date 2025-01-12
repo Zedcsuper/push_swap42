@@ -6,20 +6,13 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/18 14:53:50 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/06 16:40:22 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 13:43:37 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include "libft.h"
-
-static int	ft_isspace(char c)
-{
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	return (0);
-}
 
 long	ft_atoi(const char *str)
 {

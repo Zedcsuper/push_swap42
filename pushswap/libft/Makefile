@@ -9,6 +9,7 @@ RM=rm -rf
 OBJ_DIR=obj_dir
 
 FILES=\
+	ft_abs.c \
 	ft_atoi.c \
 	ft_bzero.c \
 	ft_calloc.c \
@@ -18,6 +19,7 @@ FILES=\
 	ft_isdigit.c \
 	ft_isprint.c \
 	ft_issign.c \
+	ft_isspace.c \
 	ft_itoa.c \
 	ft_lstadd_back.c \
 	ft_lstadd_front.c \

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 14:16:10 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/12 14:53:00 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:56:28 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes/push_swap_bonus.h"
 
 void	free_stack(t_stack **stack)
 {
@@ -40,6 +40,7 @@ void	ft_free_av(char **av, int ac)
 	free(av);
 	av = NULL;
 }
+
 
 void	exit_error(t_stack **a, t_stack **b)
 {

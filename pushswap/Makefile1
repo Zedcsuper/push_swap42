@@ -10,8 +10,6 @@ RM = rm -rf
 
 NAME = push_swap
 
-BONUS_NAME = checker
-
 LIBFT = ./libft/libft.a
 
 LIBFT_DIR = libft
@@ -21,10 +19,6 @@ OUTPUTFLAG = -o
 NORELINKFLAG = -c
 
 MKDIR = mkdir -p
-
-BONUS_SRC_DIR = ./push_swap_bonus/src
-
-BONUS_OBJ_DIR = ./push_swap_bonus/obj_dir_bonus 
 
 SRCS =\
 	src/cost.c \
@@ -42,28 +36,12 @@ SRCS =\
 	src/swap.c \
 	src/utils.c
 
-BONUS_SRC =\
-		$(BONUS_SRC_DIR)/initialization_bonus.c \
-		$(BONUS_SRC_DIR)/input_check_bonus.c \
-		$(BONUS_SRC_DIR)/push_bonus.c \
-		$(BONUS_SRC_DIR)/reverse_rotate_bonus.c \
-		$(BONUS_SRC_DIR)/rotate_bonus.c \
-		$(BONUS_SRC_DIR)/stack_bonus.c \
-		$(BONUS_SRC_DIR)/utils_bonus.c \
-		$(BONUS_SRC_DIR)/swap_bonus.c \
-		$(BONUS_SRC_DIR)/checker_bonus.c \
-		
-
 OBJS = $(addprefix $(OBJ_DIR)/, $(notdir $(SRCS:.c=.o)))
-
-OBJS_BONUS = $(addprefix $(BONUS_OBJ_DIR)/, $(notdir $(BONUS_SRC_DIR:.c=.o)))
 
 all: $(LIBFT_DIR)  $(NAME)
 
 $(NAME): $(OBJS) $(LIBFT)
 	$(CC) $(CFLAGS) $(OBJS) $(LIBFT) $(OUTPUTFLAG) $(NAME)
-
-bonus: 
 
 libft:
 	$(MAKE) -C $(LIBFT_DIR)
@@ -74,8 +52,6 @@ $(OBJ_DIR)/%.o: src/%.c | $(OBJ_DIR)
 
 $(OBJ_DIR):
 	$(MKDIR) $(OBJ_DIR)
-
-
 
 clean:
 	$(MAKE) clean -C $(LIBFT_DIR)

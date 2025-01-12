@@ -6,13 +6,13 @@
 /*   By: zjamaien <zjamaien@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/04 10:25:26 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/04 10:45:24 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 14:04:04 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-static void	push_all_save_three(t_stack **stack_a, t_stack **stack_b)
+static void	push_all_until_three(t_stack **stack_a, t_stack **stack_b)
 {
 	int	stack_size;
 	int	pushed;
@@ -66,7 +66,7 @@ static void	shift_stack(t_stack **stack_a)
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
-	push_all_save_three(stack_a, stack_b);
+	push_all_until_three(stack_a, stack_b);
 	tiny_sort(stack_a);
 	while (*stack_b)
 	{
