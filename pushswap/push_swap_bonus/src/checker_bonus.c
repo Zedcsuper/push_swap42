@@ -6,7 +6,7 @@
 /*   By: zjamaien <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 13:18:08 by zjamaien          #+#    #+#             */
-/*   Updated: 2025/01/12 14:32:30 by zjamaien         ###   ########.fr       */
+/*   Updated: 2025/01/12 20:17:58 by zjamaien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,8 +96,8 @@ int	main(int ac, char **av)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
-	int		stack_size;
 	int		is_one_str;
+//	int		stack_size;
 
 	is_one_str = 0;
 	if (ac < 2)
@@ -112,7 +112,7 @@ int	main(int ac, char **av)
 	}
 	stack_b = NULL;
 	stack_a = fill_stack_values(ac, av, is_one_str);
-	stack_size = get_stack_size(stack_a);
+//	stack_size = get_stack_size(stack_a);
 	read_from_stdin(&stack_a, &stack_b);
 	free_two_stacks(&stack_a, &stack_b);
 	if (is_one_str)
